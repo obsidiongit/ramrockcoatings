@@ -1,9 +1,9 @@
 /** Local image paths for RamRock Coatings website photography. */
 
-/** Primary homepage hero — interior shot reads sharpest at full-bleed crop. */
+/** Primary homepage hero — interior shot at 2400×1350 for crisp full-bleed display. */
 export const HERO_IMAGE = {
   src: "/images/hero/slide-3.jpg",
-  alt: "Beautiful finished basement with warm epoxy floor — RamRock Coatings, Cedar Rapids IA",
+  alt: "Luxury open-plan home with warm metallic epoxy floor — RamRock Coatings, Cedar Rapids IA",
 } as const;
 
 /** Reserved for future carousel when higher-res garage/commercial shots are ready. */
@@ -177,15 +177,15 @@ export const PAGE_HERO_IMAGES: Record<string, { src: string; alt: string }> = {
   },
   "our-work-residential": {
     src: "/images/page-heroes/our-work-residential.jpg",
-    alt: "Residential garage with premium flake epoxy floor installation",
+    alt: "Deep blue metallic epoxy floor in a modern residential garage",
   },
   "our-work-commercial": {
     src: "/images/page-heroes/our-work-commercial.jpg",
-    alt: "Commercial warehouse with durable red epoxy floor coating",
+    alt: "Copper and charcoal metallic epoxy floor in a premium commercial showroom",
   },
   "our-work-before-after": {
     src: "/images/page-heroes/our-work-before-after.jpg",
-    alt: "Garage floor before and after epoxy coating renovation",
+    alt: "Garage floor before and after epoxy coating transformation",
   },
   about: {
     src: "/images/page-heroes/about.jpg",

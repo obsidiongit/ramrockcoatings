@@ -20,19 +20,19 @@ const CATEGORIES = [
     slug: "residential",
     label: "Residential",
     description: "Garages, basements, patios, and driveways for homeowners across Iowa.",
-    image: { src: "/images/gallery/01.jpg", alt: "Metallic blue epoxy floor in a residential garage — Cedar Rapids IA" },
+    image: { src: "/images/page-heroes/our-work-residential.jpg", alt: "Deep blue metallic epoxy floor in a residential garage — Cedar Rapids IA" },
   },
   {
     slug: "commercial",
     label: "Commercial",
     description: "Warehouses, showrooms, restaurants, and industrial facilities.",
-    image: { src: "/images/gallery/06.jpg", alt: "Commercial red epoxy floor in industrial warehouse" },
+    image: { src: "/images/page-heroes/our-work-commercial.jpg", alt: "Copper metallic epoxy floor in a premium commercial showroom" },
   },
   {
     slug: "before-after",
     label: "Before & After",
     description: "The most satisfying proof of what a new floor can do for a space.",
-    image: { src: "/images/gallery/10.jpg", alt: "Concrete surface prep with a diamond grinder before epoxy coating" },
+    image: { src: "/images/page-heroes/our-work-before-after.jpg", alt: "Garage floor before and after epoxy coating transformation" },
   },
 ];
 

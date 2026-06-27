@@ -53,8 +53,9 @@ export function PageHero({
           alt={image.alt}
           fill
           priority
+          quality={90}
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="hero-photo-scrim" aria-hidden="true" />
         <Container className="hero-content relative z-10 w-full">
