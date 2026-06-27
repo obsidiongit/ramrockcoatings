@@ -1275,3 +1275,48 @@ a.hero-trust-item:hover {
 .skip-to-content:focus {
   top: 0;
 }
+
+/* ─── GoHighLevel embedded form ──────────────────────────────── */
+.ghl-form-shell {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.ghl-form-shell-header {
+  padding: 2rem 2rem 1.25rem;
+  border-bottom: 1px solid var(--color-border-light);
+  background: linear-gradient(
+    180deg,
+    var(--color-background) 0%,
+    white 100%
+  );
+}
+
+.ghl-form-iframe-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 916px;
+  background: white;
+}
+
+.ghl-form-iframe {
+  display: block;
+  width: 100%;
+  min-height: 916px;
+  border: 0;
+  background: transparent;
+}
+
+@media (max-width: 640px) {
+  .ghl-form-shell-header {
+    padding: 1.5rem 1.25rem 1rem;
+  }
+
+  .ghl-form-iframe-wrap,
+  .ghl-form-iframe {
+    min-height: 980px;
+  }
+}
