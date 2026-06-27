@@ -1,20 +1,11 @@
-import { Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
+import { TestimonialCard } from "@/components/ui/TestimonialCard";
 import { ProjectImage } from "@/components/ui/ProjectImage";
 import { TESTIMONIALS, BUSINESS } from "@/lib/data";
 import { ABOUT_IMAGE } from "@/lib/images";
-
-function initials(name: string) {
-  return name
-    .split(/[\s.]+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase() ?? "")
-    .join("");
-}
 
 export function AboutSection() {
   return (
@@ -90,56 +81,29 @@ export function TestimonialsSection() {
           <SectionHeader
             eyebrow="Reviews"
             heading="What Our Clients Say"
-            subtext="Real homeowners and businesses across Iowa — not stock quotes."
+            subtext="Verified Yelp reviews from RamRock Coatings clients."
           />
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {TESTIMONIALS.map((t, i) => (
             <FadeIn key={t.id} delay={i * 0.08}>
-              <blockquote className="testimonial-card">
-                <div className="testimonial-card-header">
-                  <div
-                    className="testimonial-avatar"
-                    aria-hidden="true"
-                  >
-                    {initials(t.name)}
-                  </div>
-                  <div>
-                    <div className="flex gap-0.5 mb-1">
-                      {Array.from({ length: t.rating }).map((_, j) => (
-                        <Star
-                          key={j}
-                          size={13}
-                          className="fill-amber-400 text-amber-400"
-                        />
-                      ))}
-                    </div>
-                    <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                    <p className="text-xs text-foreground-subtle">
-                      {t.service} · {t.location}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-sm text-foreground-muted leading-relaxed">
-                  &ldquo;{t.text}&rdquo;
-                </p>
-              </blockquote>
+              <TestimonialCard testimonial={t} compact />
             </FadeIn>
           ))}
         </div>
 
         <FadeIn className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
           <Button href="/testimonials" variant="secondary">
-            Read More Reviews
+            Read Full Reviews
           </Button>
           <a
-            href={BUSINESS.social.google}
+            href={BUSINESS.social.yelp}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-accent hover:text-accent-dark transition-colors"
           >
-            See us on Google Maps →
+            See all reviews on Yelp →
           </a>
         </FadeIn>
       </Container>

@@ -1167,6 +1167,17 @@ a.hero-trust-item:hover {
   flex-shrink: 0;
 }
 
+.testimonial-source-link {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-foreground-muted);
+  transition: color 0.2s ease;
+}
+
+.testimonial-source-link:hover {
+  color: var(--color-accent);
+}
+
 /* ─── Footer ─────────────────────────────────────────────────── */
 .footer {
   background: #1c1917;

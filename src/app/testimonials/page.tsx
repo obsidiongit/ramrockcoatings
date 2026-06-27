@@ -4,13 +4,14 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { PageHero } from "@/components/sections/PageHero";
 import { CTABanner } from "@/components/sections/CTABanner";
-import { TESTIMONIALS, STATS } from "@/lib/data";
+import { TestimonialCard } from "@/components/ui/TestimonialCard";
+import { TESTIMONIALS, STATS, BUSINESS } from "@/lib/data";
 import { getPageHeroImage } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Customer Reviews | RamRock Coatings — Cedar Rapids, IA",
   description:
-    "See what homeowners and businesses across Iowa say about RamRock Coatings. 100% customer satisfaction on every epoxy flooring project.",
+    "Read verified Yelp reviews for RamRock Coatings — epoxy flooring contractor in Cedar Rapids, Iowa.",
 };
 
 export default function TestimonialsPage() {
@@ -23,7 +24,7 @@ export default function TestimonialsPage() {
       <PageHero
         eyebrow="Reviews"
         title="What Our Clients Say"
-        description="Real feedback from homeowners who trusted RamRock Coatings with their floors."
+        description="Verified reviews from homeowners who trusted RamRock Coatings with their floors."
         image={heroImage}
       />
 
@@ -39,38 +40,34 @@ export default function TestimonialsPage() {
               </div>
             </div>
             <div className="text-center sm:text-left">
-              <p className="font-semibold text-foreground">Average Rating</p>
+              <p className="font-semibold text-foreground">5-Star on Yelp</p>
               <p className="text-sm text-foreground-muted">
-                Based on {TESTIMONIALS.length} verified reviews
+                {TESTIMONIALS.length} verified reviews
               </p>
             </div>
           </div>
 
           <SectionHeader
             heading="Customer Reviews"
-            subtext="Every review below comes from a real RamRock Coatings client."
+            subtext="Every review below is published on our Yelp profile."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {TESTIMONIALS.map((t) => (
-              <blockquote key={t.id} className="card p-8">
-                <span className="quote-mark mb-2 block" aria-hidden="true">&ldquo;</span>
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} size={14} className="fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-foreground-muted leading-relaxed mb-6">{t.text}</p>
-                <footer className="border-t border-border-light pt-4">
-                  <p className="font-semibold text-foreground">{t.name}</p>
-                  <p className="text-sm text-foreground-subtle mt-0.5">{t.location}</p>
-                  {"service" in t && t.service && (
-                    <p className="text-xs text-accent mt-1 font-medium">{t.service}</p>
-                  )}
-                </footer>
-              </blockquote>
+              <TestimonialCard key={t.id} testimonial={t} />
             ))}
           </div>
+
+          <p className="text-center mt-10">
+            <a
+              href={BUSINESS.social.yelp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-accent hover:text-accent-dark transition-colors"
+            >
+              Read more reviews on Yelp →
+            </a>
+          </p>
         </Container>
       </section>
 

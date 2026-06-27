@@ -220,36 +220,39 @@ export const TESTIMONIALS = [
   {
     id: 1,
     name: "Josephine N.",
-    location: "Cedar Rapids, IA",
     rating: 5,
     service: "Residential Epoxy — Garage",
-    text: "Highly recommend RamRock Coatings. Their crew was professional, knew their stuff, and paid attention to the details. The floor is smooth, durable, and has a clean finish that changed how we use the garage.",
+    title: "Highly Recommend RamRock Coatings!",
+    featured: true,
+    source: "yelp",
+    date: "December 2025",
+    excerpt:
+      "I had an amazing experience with RamRock Coatings for my epoxy flooring in my garage. Their team was professional, knowledgeable, and extremely detail-oriented. The final result turned out better than I imagined.",
+    text: "I had an amazing experience with RamRock Coatings for my epoxy flooring in my garage. From start to finish, their team was professional, knowledgeable, and extremely detail-oriented. They walked me through every step of the process, answered all my questions, and made sure I knew exactly what to expect.\n\nThe final result turned out better than I imagined. The floor is smooth, durable, and has a clean, high-quality finish that completely transformed the space. You can tell they take pride in their work — everything was done with precision and care.\n\nThey were also punctual, respectful of my home, and cleaned up thoroughly when they were done. It's rare to find a company that combines great craftsmanship with great customer service, but RamRock Coatings absolutely delivers both.\n\nIf you're thinking about getting epoxy flooring, I highly recommend RamRock Coatings. You won't be disappointed!",
   },
   {
     id: 2,
     name: "Nolan E.",
-    location: "Cedar Rapids, IA",
     rating: 5,
     service: "Garage Coating & Epoxy",
-    text: "Really happy with the garage coating. They showed up when they said they would, prepped the concrete right, and the finish looks great — smooth, tough, and easy to keep clean.",
+    source: "yelp",
+    date: "December 2025",
+    excerpt:
+      "I'm absolutely thrilled with the garage coating and epoxy work. The application was flawless, with meticulous attention to detail — my garage has been completely transformed.",
+    text: "I'm absolutely thrilled with the garage coating and epoxy work done by this company! From start to finish, the entire process was seamless and professional. The team was incredibly knowledgeable, helping me choose the perfect coating to match my needs and aesthetic preferences. The application was flawless, with meticulous attention to detail, resulting in a smooth, durable, and visually stunning finish. My garage has been completely transformed into a clean, functional, and attractive space that I'm proud to show off. I highly recommend their services to anyone looking to upgrade their garage!",
   },
   {
     id: 3,
-    name: "Marcus T.",
-    location: "Iowa City, IA",
+    name: "Demarcus C.",
     rating: 5,
-    service: "Metallic Epoxy — Basement",
-    text: "We went with the metallic finish for our basement and it looks incredible. Way better than anything we expected. They were upfront about pricing and finished on schedule. No upsells, no surprises. Will be calling them again for the garage.",
-  },
-  {
-    id: 4,
-    name: "Carla D.",
-    location: "Cedar Falls, IA",
-    rating: 5,
-    service: "Commercial Epoxy — Showroom",
-    text: "We had RamRock coat the floor in our auto showroom. The results speak for themselves — customers comment on it constantly. They worked around our schedule and the floor has held up to heavy traffic without a scratch.",
+    service: "Flake & Chip — Garage",
+    source: "yelp",
+    date: "May 2026",
+    text: "Jonanthan was very kind and respectful during the whole process, he only took 2 days, and my garage was brand new. I went with the black and red flake with a red basecoat, now my home is looking fresh, and the property value has already gone up according to my realtor.",
   },
 ] as const;
+
+export type Testimonial = (typeof TESTIMONIALS)[number];
 
 export const PROCESS_STEPS = [
   {
