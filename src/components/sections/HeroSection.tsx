@@ -15,7 +15,7 @@ export function HeroSection() {
           alt={HERO_IMAGE.alt}
           fill
           priority
-          quality={90}
+          unoptimized
           sizes="100vw"
           className="object-cover object-[center_55%]"
         />
