@@ -173,7 +173,7 @@ export const PAGE_HERO_IMAGES: Record<string, { src: string; alt: string }> = {
   },
   "our-work": {
     src: "/images/page-heroes/our-work.jpg",
-    alt: "Collection of completed epoxy flooring projects by RamRock Coatings",
+    alt: "High-gloss metallic epoxy garage floor with mirror-like reflections — RamRock Coatings portfolio",
   },
   "our-work-residential": {
     src: "/images/page-heroes/our-work-residential.jpg",
@@ -193,7 +193,7 @@ export const PAGE_HERO_IMAGES: Record<string, { src: string; alt: string }> = {
   },
   faq: {
     src: "/images/page-heroes/faq.jpg",
-    alt: "Floor coating estimate paperwork on a finished epoxy garage floor",
+    alt: "Bright modern garage with flake epoxy floor — RamRock Coatings answers common flooring questions",
   },
   contact: {
     src: "/images/page-heroes/contact.jpg",
