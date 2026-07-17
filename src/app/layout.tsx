@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MobileCTA from "@/components/layout/MobileCTA";
+import MetaPixel from "@/components/analytics/MetaPixel";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -78,6 +79,7 @@ export default function RootLayout({
       className={`${inter.variable} ${archivo.variable} ${oswald.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
+        <MetaPixel />
         <a href="#main-content" className="skip-to-content">
           Skip to content
         </a>
